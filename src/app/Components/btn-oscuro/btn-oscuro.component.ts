@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-btn-oscuro',
   standalone: true,
-  imports: [],
+  imports: [Component, EventEmitter, Output],
   templateUrl: './btn-oscuro.component.html',
-  styleUrl: './btn-oscuro.component.css'
+  styleUrls: ['./btn-oscuro.component.css']
 })
 export class BtnOscuroComponent {
+  @Output() toggleDarkMode = new EventEmitter<void>();
 
+  onClick() {
+    this.toggleDarkMode.emit();
+  }
 }
