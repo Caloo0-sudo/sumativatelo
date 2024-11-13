@@ -3,6 +3,18 @@
   <p>Contraseña: {{ password }}</p>
   <p>Email: {{ email }}</p>
   <p>Texto: {{ texto }}</p>
-  
+
   <div [class.animate]="animationActive" class="cuadrado"></div>
+
+  <!-- Inputs -->
+  <app-password (passwordChange)="updatePassword($event)"></app-password>
+  <app-email (emailChange)="updateEmail($event)"></app-email>
+  <app-texto (textoChange)="updateTexto($event)"></app-texto>
+
+  <!-- Botones -->
+  <app-btn-primario (buttonClicked)="triggerAnimation()"></app-btn-primario>
+  <app-btn-secundario (buttonClicked)="triggerAnimation()"></app-btn-secundario>
+  <app-btn-aceptar (buttonClicked)="triggerAnimation()"></app-btn-aceptar>
+  <app-btn-cancelar (buttonClicked)="triggerAnimation()"></app-btn-cancelar>
+  <app-btn-oscuro (toggleDarkMode)="toggleDarkMode()"></app-btn-oscuro>
 </div>

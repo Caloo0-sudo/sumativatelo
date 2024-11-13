@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-datos',
   standalone: true,
-  imports: [Component],
+  imports: [Component, EventEmitter, Output, FormsModule, BrowserModule],
   templateUrl: './datos.component.html',
   styleUrls: ['./datos.component.css']
 })
